@@ -44,5 +44,5 @@ A user-friendly full-stack MERN application for managing volunteer posts. Users 
 1. **Clone the repositories:**
 
    ```bash
-   git clone https://github.com/your-username/client-repo.git
-   git clone https://github.com/your-username/server-repo.git
+   git clone https://github.com/swajannaimur/client-repo.git
+
