@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../Components/Loader/Loader';
 import { AuthContext } from '../../contexts/AuthContexts';
-import { Link } from 'react-router'; 
+import { Link } from 'react-router';
 
 const MyAddedPosts = () => {
   const { user } = useContext(AuthContext);

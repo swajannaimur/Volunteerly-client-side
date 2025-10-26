@@ -33,6 +33,7 @@ const Navbar = () => {
             <li><NavLink to="/" className="text-primary lg:text-lg font-bold">Home</NavLink></li>
             <li><NavLink to="/allPosts" className="text-primary lg:text-lg font-bold">All Volunteer Need Posts</NavLink></li>
             <li><NavLink to="/myPosts" className="text-primary lg:text-lg font-bold">My Posts</NavLink></li>
+            <li><NavLink to="/notifications" className="text-primary lg:text-lg font-bold">Notifications</NavLink></li>
         </>
     );
 

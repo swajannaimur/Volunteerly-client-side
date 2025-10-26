@@ -15,6 +15,7 @@ import VolunteerDetails from "../Pages/VolunteerDetails/VolunteerDetails";
 import BeVolunteer from "../Components/BeVolunteer/BeVolunteer";
 import UpdatePage from "../Pages/UpdatePage/UpdatePage";
 import MyAddedPosts from "../Pages/MyPosts/MyAddedPosts";
+import Notifications from "../Components/Notifications/Notifications";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>
             },
             { path: 'login', Component: Login },
+            { path: 'Notifications', Component:  Notifications},
             { path: 'myPosts', Component: MyAddedPosts },
             { path: 'register', Component: Register },
             { path: 'addVolunteer', element: <PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute> },

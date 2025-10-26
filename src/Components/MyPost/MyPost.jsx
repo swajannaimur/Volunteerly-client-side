@@ -24,7 +24,6 @@ const MyPost = ({ myPostApi }) => {
         return <Loader></Loader>;
     }
 
-
     return (
         <div className=''>
             <div className="mb-6 text-center">
@@ -33,8 +32,6 @@ const MyPost = ({ myPostApi }) => {
                     Manage all the volunteer opportunities you've created. Track the number of volunteers needed, edit details, and stay organized with your ongoing community initiatives.
                 </p>
             </div>
-
-
             {
                 myPosts.length === 0 ? <div className="text-center text-secondary font-bold mt-12 text-2xl">
                     🎯 You don't have any volunteer posts yet. Create a new post to start making a difference in your community!
