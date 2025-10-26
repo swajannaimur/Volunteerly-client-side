@@ -63,6 +63,9 @@ const Navbar = () => {
                                         <li className='text-primary font-bold'>
                                             <Link to="/managePosts">Manage My Posts</Link>
                                         </li>
+                                        <li className='text-primary font-bold'>
+                                             <Link to="/history">History</Link>
+                                        </li>
                                         <li>
                                             <button onClick={handleSignOut} className="btn btn-sm btn-error text-white mt-1">Logout</button>
                                         </li>
@@ -125,6 +128,9 @@ const Navbar = () => {
                                     </li>
                                     <li className='text-primary font-semibold'>
                                         <Link to="/managePosts">Manage My Posts</Link>
+                                    </li>
+                                    <li className='text-primary font-bold'>
+                                        <Link to="/history">History</Link>
                                     </li>
                                     <li>
                                         <button onClick={handleSignOut} className="btn btn-secondary text-white w-full mt-2">Logout</button>

@@ -10,7 +10,7 @@ const Notifications = () => {
     const { data: notifications, isPending } = useQuery({
         queryKey: ["notifications"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:3000/notifications?email=${user.email}`)
+            const res = await fetch(`https://volunteerly-server-side.vercel.app/notifications?email=${user.email}`)
             return res.json()
         }
     })
@@ -20,10 +20,10 @@ const Notifications = () => {
 
     return (
         <div className="min-h-screen px-4 py-8">
-           <div className="mb-6 text-center">
+            <div className="mb-6 text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold text-primary mt-4">Your Upcoming deadlines </h2>
                 <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-700 my-3">
-                   See your deadline after requesting
+                    See your deadline after requesting
                 </p>
             </div>
 
