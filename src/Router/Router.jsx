@@ -24,32 +24,22 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch('https://volunteerly-server-side.vercel.app/volunteers'),
-                hydrateFallbackElement: <Loader></Loader>,
                 Component: Home
             },
             {
                 path: 'allPosts',
-                loader: () => fetch('https://volunteerly-server-side.vercel.app/volunteers'),
-                hydrateFallbackElement: <Loader></Loader>,
                 Component: AllPosts,
             },
             {
                 path: 'volunteerDetails/:id',
-                loader: ({ params }) => fetch(`https://volunteerly-server-side.vercel.app/volunteers/${params.id}`),
-                hydrateFallbackElement: <Loader></Loader>,
                 element: <PrivateRoute><VolunteerDetails></VolunteerDetails></PrivateRoute>
             },
             {
                 path: '/beVolunteer/:id',
-                loader: ({ params }) => fetch(`https://volunteerly-server-side.vercel.app/volunteers/${params.id}`),
-                hydrateFallbackElement: <Loader></Loader>,
                 Component: BeVolunteer
             },
             {
                 path: 'update/:id',
-                loader: ({ params }) => fetch(`https://volunteerly-server-side.vercel.app/volunteers/${params.id}`),
-                hydrateFallbackElement: <Loader></Loader>,
                 element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>
             },
             { path: 'login', Component: Login },

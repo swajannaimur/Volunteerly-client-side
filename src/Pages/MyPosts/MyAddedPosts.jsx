@@ -10,7 +10,7 @@ const MyAddedPosts = () => {
   const { isLoading, isError, data: myPosts = [] } = useQuery({
     queryKey: ['myAddedPosts', user?.email],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:3000/volunteers?email=${user?.email}`);
+      const res = await fetch(`https://volunteerly-server-side.vercel.app/volunteers?email=${user?.email}`);
       if (!res.ok) throw new Error('Failed to fetch posts');
       return res.json();
     },

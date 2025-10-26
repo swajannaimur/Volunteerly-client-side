@@ -1,5 +1,5 @@
 export const myPostApi = (email, accessToken) =>{
-    return fetch (`http://localhost:3000/volunteers?email=${email}`,{
+    return fetch (`https://volunteerly-server-side.vercel.app/volunteers?email=${email}`,{
         headers:{
             authorization: `Bearer ${accessToken}`
         }

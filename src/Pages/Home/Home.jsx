@@ -6,6 +6,8 @@ import Testimonials from '../../Components/Testimonials/Testimonials';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion, useInView } from 'framer-motion';
 import { useLoaderData } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
+import Loader from '../../Components/Loader/Loader';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -30,7 +32,17 @@ const Section = ({ children }) => {
 };
 
 const Home = () => {
-  const postsPromise = useLoaderData();
+
+  const { isLoading, isError, data: postsPromise = [] } = useQuery({
+    queryKey: ['volunteers'],
+    queryFn: async () => {
+      const res = await fetch("https://volunteerly-server-side.vercel.app/volunteers");
+      return res.json();
+    },
+
+  });
+  if (isLoading) return <Loader />;
+  if (isError) return <p className="text-center text-red-500">Failed to load your posts.</p>;
 
   return (
     <div className="p-4 space-y-20">
