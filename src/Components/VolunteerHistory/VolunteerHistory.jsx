@@ -10,7 +10,7 @@ const VolunteerHistory = () => {
     const { data: history, isLoading } = useQuery({
         queryKey: ['volunteerHistory', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:3000/history?email=${user.email}`);
+            const res = await fetch(`https://volunteerly-server-side.vercel.app/history?email=${user.email}`);
             if (!res.ok) throw new Error('Failed to fetch history');
             return res.json();
         },
